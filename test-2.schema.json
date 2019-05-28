@@ -1,0 +1,53 @@
+{
+    "$id": "/",
+    "type": "object",
+    "properties": {
+        "a": {
+            "$id": "/properties/a",
+            "type": "string"
+        },
+        "b": {
+            "$id": "/properties/b",
+            "type": "array",
+            "items": {
+                "$id": "/properties/b/items",
+                "type": "object",
+                "$ref": "#/definitions/F"
+            }
+        },
+        "c": {
+            "$id": "/properties/c",
+            "type": "boolean"
+        },
+        "d": {
+            "$id": "/properties/d",
+            "type": "object",
+            "properties": {
+                "dA": {
+                    "$id": "/properties/d/properties/dA",
+                    "type": "number"
+                }
+            }
+        },
+        "e": {
+            "$id": "/properties/e",
+            "$ref": "#/definitions/E"
+        }
+    },
+    "definitions": {
+        "E": {
+            "$id": "/definitions/E",
+            "type": "object",
+            "properties": {
+                "eA": {
+                    "$id": "/definitions/E/properties/eA",
+                    "type": "string"
+                }
+            }
+        },
+        "F": {
+            "$id": "/definitions/F",
+            "type": "string"
+        }
+    }
+}
